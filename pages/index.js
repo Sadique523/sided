@@ -46,15 +46,6 @@ export default function Home() {
   const Item = (props) => {
     const {news} = props;
     const [modal, setModal] = React.useState(false);
-
-    React.useEffect(() => {
-      if(modal) {
-        document.getElementById('app-container').style.position = 'fixed';
-      }
-      return () => {
-        document.getElementById('app-container').style.position = 'initial';
-      }
-    }, [modal])
     
     return (
       <li onClick={() => setModal(!modal)} className="w-3/12 laptop:w-4/12 tablet:w-6/12 mobile:w-full">
