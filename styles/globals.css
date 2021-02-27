@@ -24,6 +24,6 @@
     background: rgba(0, 0, 0, 0.8);
     display: inline-block;
     text-align: left;
-    vertical-align: middle; /* Center vertically, part 2 */
+    height: 100%;
     border-radius: 5px;
   }

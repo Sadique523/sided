@@ -11,7 +11,7 @@ export default function Home() {
   const [source, setSource] = React.useState('the-times-of-india');
 
   React.useEffect(() => {
-    fetch(`${API}?sources=${source}&token=${API_KEY}`)
+    fetch(`${API}?country=in&token=${API_KEY}`)
     .then(res => res.json())
     .then(res => setData(res.articles));
   }, [source]);
@@ -46,6 +46,15 @@ export default function Home() {
   const Item = (props) => {
     const {news} = props;
     const [modal, setModal] = React.useState(false);
+
+    React.useEffect(() => {
+      if(modal) {
+        document.getElementById('app-container').style.position = 'fixed';
+      }
+      return () => {
+        document.getElementById('app-container').style.position = 'initial';
+      }
+    }, [modal])
     
     return (
       <li onClick={() => setModal(!modal)} className="w-3/12 laptop:w-4/12 tablet:w-6/12 mobile:w-full">
