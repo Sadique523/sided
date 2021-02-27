@@ -3,3 +3,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.modal {
+    background: rgba(0, 0, 0, .6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    text-align: center; /* Center horizontally */
+  }
+  .modal:before { /* Center vertically, part 1 */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .modal-dialog {
+    background: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle; /* Center vertically, part 2 */
+    border-radius: 5px;
+  }

@@ -18,7 +18,7 @@ module.exports = {
       fontFamily: {
         'Mukta': ['Mukta'],
         'Reggae': ['Reggae One']
-      }
+      },
     },
   },
   variants: {
